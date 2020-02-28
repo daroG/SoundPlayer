@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:id="@+id/layout">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Loaded sequence:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/play_c"
+        style="@style/btn_width"
+        android:layout_height="180dp"
+        android:layout_marginBottom="5dp"
+        android:text="c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/play_d"
+        style="@style/btn_width"
+        android:layout_height="180dp"
+        android:text="d"
+        app:layout_constraintStart_toEndOf="@+id/play_c"
+        app:layout_constraintTop_toTopOf="@+id/play_c" />
+
+    <Button
+        android:id="@+id/play_e"
+        style="@style/btn_width"
+        android:layout_height="180dp"
+        android:text="e"
+        app:layout_constraintStart_toEndOf="@+id/play_d"
+        app:layout_constraintTop_toTopOf="@+id/play_d" />
+
+    <Button
+        android:id="@+id/play_g"
+        style="@style/btn_width"
+        android:layout_height="180dp"
+        android:text="g"
+        app:layout_constraintStart_toEndOf="@+id/play_f"
+        app:layout_constraintTop_toTopOf="@+id/play_f" />
+
+    <Button
+        android:id="@+id/play_a"
+        style="@style/btn_width"
+        android:layout_height="180dp"
+        android:text="a"
+        app:layout_constraintStart_toEndOf="@+id/play_g"
+        app:layout_constraintTop_toTopOf="@+id/play_g" />
+
+    <Button
+        android:id="@+id/play_h"
+        style="@style/btn_width"
+        android:layout_height="180dp"
+        android:text="h"
+        app:layout_constraintStart_toEndOf="@+id/play_a"
+        app:layout_constraintTop_toTopOf="@+id/play_a" />
+
+    <Button
+        android:id="@+id/play_f"
+        style="@style/btn_width"
+        android:layout_height="180dp"
+        android:text="f"
+        app:layout_constraintStart_toEndOf="@+id/play_e"
+        app:layout_constraintTop_toTopOf="@+id/play_d" />
+
+    <Button
+        android:id="@+id/play_c2"
+        style="@style/btn_width"
+        android:layout_height="180dp"
+        android:text="c"
+        app:layout_constraintStart_toEndOf="@+id/play_h"
+        app:layout_constraintTop_toTopOf="@+id/play_h" />
+
+    <TextView
+        android:id="@+id/sequence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        tools:text="No sequence loaded" />
+
+    <Button
+        android:id="@+id/play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableRight="@drawable/ic_play_arrow_24px"
+        android:text="Play sequence"
+        app:layout_constraintStart_toEndOf="@+id/load_btn"
+        app:layout_constraintTop_toBottomOf="@+id/sequence" />
+
+    <Button
+        android:id="@+id/load_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load sequence"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/play_btn"
+        android:drawableRight="@drawable/ic_unarchive_24px"/>
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save sequence"
+        app:layout_constraintStart_toEndOf="@+id/play_btn"
+        app:layout_constraintTop_toTopOf="@+id/play_btn"
+        android:drawableRight="@drawable/ic_archive_24px"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Actual sequence:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/actual_sequence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/clear_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear actual sequence"
+        app:layout_constraintStart_toEndOf="@+id/save_btn"
+        app:layout_constraintTop_toTopOf="@+id/play_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
